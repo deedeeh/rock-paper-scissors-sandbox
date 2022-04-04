@@ -42,28 +42,10 @@ const getRandomMove = () => {
     const playerOneMoveName = document.getElementById('player-one-move__name');
     const playerTwoMoveName = document.getElementById('player-two-move__name');
     const result = document.createElement('h3');
-    switch(moveOne) {
-      case 'paper':
-        playerOneImg.src = 'images/paper.png';
-        break;
-      case 'rock':
-        playerOneImg.src = 'images/rock.png';
-        break;
-      case 'scissors':
-        playerOneImg.src = 'images/scissors.png';
-        break;
-    }
-    switch(moveTwo) {
-      case 'paper':
-        playerTwoImg.src = 'images/paper.png';
-        break;
-      case 'rock':
-        playerTwoImg.src = 'images/rock.png';
-        break;
-      case 'scissors':
-        playerTwoImg.src = 'images/scissors.png';
-        break;
-    }
+
+    playerOneImg.src = `images/${moveOne}.png`
+    playerTwoImg.src = `images/${moveTwo}.png`
+    
     playerOneMoveName.textContent = moveOne;
     playerTwoMoveName.textContent = moveTwo;
     result.id = 'outcome'
